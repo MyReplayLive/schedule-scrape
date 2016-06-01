@@ -10,7 +10,7 @@ module ScheduleScraper
       element 'td:nth(6)' => :rink, :with => cleaner
 
       def date_format
-        "%m/%d/%y"
+        "%y-%m-%d "
       end
     end
   end

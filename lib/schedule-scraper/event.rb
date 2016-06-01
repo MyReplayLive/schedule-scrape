@@ -25,7 +25,8 @@ module ScheduleScraper
     end
 
     def start_date
-      Date.parse(date).strftime(date_format)
+      puts "DATE IS: " + Time.parse(time).to_s
+      Date.parse(Time.parse(time).to_s).strftime(date_format)
     end
 
     def end_date
@@ -47,7 +48,7 @@ module ScheduleScraper
     # end
 
     def start_date_time
-      DateTime.strptime "#{start_date} #{start_time}", '%m/%d/%y %H:%M %P'
+      DateTime.parse(Time.parse(time).to_s)
     end
 
     def end_date_time
